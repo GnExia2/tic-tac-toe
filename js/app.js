@@ -57,7 +57,7 @@ function canvasClicked(canvasNumber){
         }
     }
       else{
-        alert("THAT SPACE IS ALREADY OCCUPIED");
+        prompt("THAT SPACE IS ALREADY OCCUPIED");
       }
 }
 function checkForWinners(symbol){
