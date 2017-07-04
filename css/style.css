@@ -1,8 +1,9 @@
-#board {
-  margin-top: 10px;
-}
+body{
+	    text-align:center;
+	}
 
-.box {
-  border: 1px solid black;
-  height: 150px;
-}
+	.box{
+	    text-align:left;
+	    width:auto;
+	    height:auto;
+	}
