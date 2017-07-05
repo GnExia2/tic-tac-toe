@@ -1,6 +1,6 @@
 console.log("js is loaded")
 
-
+//sets variables needed
 var painted;
 var content;
 var winningCombinations;
@@ -30,7 +30,7 @@ function canvasClicked(canvasNumber){
     cxt = c.getContext("2d");
     if(painted[canvasNumber-1] ==false){
         if(turn%2==0){
-            cxt.beginPath();
+            cxt.beginPath(); //creates X
             cxt.moveTo(20,20);
             cxt.lineTo(80,80);
             cxt.moveTo(80,20);
@@ -41,7 +41,7 @@ function canvasClicked(canvasNumber){
         }
           else{
             cxt.beginPath();
-            cxt.arc(50,50,40,0,Math.PI*2,true);
+            cxt.arc(50,50,40,0,Math.PI*2,true); //creates circle within block
             cxt.stroke();
             cxt.closePath();
             content[canvasNumber-1] = 'O';
@@ -60,15 +60,15 @@ function canvasClicked(canvasNumber){
         prompt("THAT SPACE IS ALREADY OCCUPIED");
       }
 }
-function checkForWinners(symbol){
+function checkForWinners(symbol){ //checkForWinners
     for(var a = 0; a < winningCombinations.length; a++){
-      if(content[winningCombinations[a][0]]==symbol&&content[winningCombinations[a][1]]== symbol&&content[winningCombinations[a][2]]==symbol){
-        alert(symbol+ " WON!");
+      if (content[winningCombinations[a][0]] == symbol && content[winningCombinations[a][1]] == symbol && content[winningCombinations[a][2]] == symbol){
+        alert(symbol+ " WON!"); // either X or Y + "WON!"
         playAgain();
       }
     }
 }
-function playAgain(){
+function playAgain(){ //would you like to play again?
     y=confirm("PLAY AGAIN?");
     if(y==true){
         location.reload(true);
